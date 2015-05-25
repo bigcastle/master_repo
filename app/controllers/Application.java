@@ -62,7 +62,7 @@ public class Application extends Controller {
     	task.save();
     								*/
 
-        return ok(index.render("hi！！！"));
+        return ok(index.render("hi"));
     }
 
 
