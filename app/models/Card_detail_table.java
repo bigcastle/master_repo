@@ -27,6 +27,8 @@ public class Card_detail_table extends Model {
 
 	public Integer THANKS_CARD_TOTALPOINT;
 
+	public static Finder<Integer,Card_detail_table> find = new Finder<Integer,Card_detail_table>(
+	        Integer.class, Card_detail_table.class);
 
 
 

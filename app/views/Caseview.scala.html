@@ -1,0 +1,151 @@
+ @(cardList: List[Card_detail_table], n: List[String])
+
+ <html>
+      <head>
+
+	<STYLE type="text/css">
+ <!--
+.scr {
+   overflow: scroll;   /* スクロール表示 */
+   width: 550px;
+   height: 200px;
+
+ }
+.vsb {
+   overflow: visible;  /* はみ出して表示 */
+   width: 550px;
+   height: 200px;
+
+ }
+.hdn {
+   overflow: hidden;   /* はみ出さず表示 */
+   width: 550px;
+   height: 200px;
+
+ }
+ -->
+</STYLE>
+
+
+           <title>事例閲覧画面</title>
+       </head>
+       <body>
+          <a>事例閲覧画面</a>
+          <hr>
+
+            <table  border="5" align="right">
+
+                              <th>Myページ</th>
+			</table>
+
+		<h1>代表事例</h1>
+
+<div class = "scr">
+ <table border = 1>
+  <tr>
+    <th>日付</th>
+    <th>部署</th>
+    <th>感謝する人</th>
+　　<th>部署</th>
+　　<th>感謝された人</th>
+　　<th>ヘルプ内容</th>
+　　<th>感謝の言葉</th>
+  </tr>
+  <tr>
+    <td>@n</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+</table>
+</div><br>
+<h1>最近の事例</h1>
+<div class = "scr">
+ <table border = 1>
+  <tr>
+    <th>日付</th>
+    <th>部署</th>
+    <th>感謝する人</th>
+　　<th>部署</th>
+　　<th>感謝された人</th>
+　　<th>ヘルプ内容</th>
+　　<th>感謝の言葉</th>
+  </tr>
+
+ <tbody>
+  @i=@{0}
+  @for(u <- cardList){
+  <tr>
+
+    <td>@u.THANKS_CARD_DATE</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>@n(i)</td>
+    <td>@u.THANKS_CARD_HELP</td>
+    <td>@u.THANKS_CARD_WORD</td>
+    <td>
+    <input type="button" name="ボタン名" value="詳細"></td><br>
+   </tr>
+
+
+  }
+
+  </tbody>
+
+</div><br>
+
+
+
+
+      </body>
+ </html>

@@ -17,4 +17,8 @@ public class DEPARTMENT_TABLE extends Model {
 
 	public Integer BOSS_ID;
 
+
+	public static Finder<Long, DEPARTMENT_TABLE> find = new Finder<Long,DEPARTMENT_TABLE>(
+	        Long.class, DEPARTMENT_TABLE.class);
+
 }

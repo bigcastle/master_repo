@@ -22,4 +22,8 @@ public class Stafftable extends Model {
 	public Integer AUTHORITY_ID;
 
 
+	public static Finder<Integer, Stafftable> find = new Finder<Integer,Stafftable>(
+			Integer.class, Stafftable.class);
+
+
 }
