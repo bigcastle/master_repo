@@ -1,8 +1,0 @@
-05-25 17:18:14 jdbc[6]: exception
-org.h2.jdbc.JdbcSQLException: テーブル "PLAY_EVOLUTIONS" が見つかりません
-Table "PLAY_EVOLUTIONS" not found; SQL statement:
-select id, hash, apply_script, revert_script, state, last_problem from play_evolutions where state like 'applying_%' [42102-175]
-05-25 18:20:02 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: テーブル "CARD_DCARD_DETAIL_TABLE" が見つかりません
-Table "CARD_DCARD_DETAIL_TABLE" not found; SQL statement:
-SELECT * FROM CARD_DCARD_DETAIL_TABLE ETAIL_TABLE [42102-175]
