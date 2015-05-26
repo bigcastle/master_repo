@@ -7,7 +7,7 @@ import play.db.ebean.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 
 
 @Entity
@@ -34,7 +34,7 @@ public class Card_detail_table extends Model {
 
 
 
-	@OneToOne
+	@OneToMany
 	public List<Thanks_card_table> thanks_card;
 
 

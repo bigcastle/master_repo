@@ -27,7 +27,7 @@ public class Thanks_card_table extends Model {
 	public List<Stafftable> user;
 
 
-	@OneToOne
+	@ManyToOne
 	public List<Card_detail_table> card_detail;
 
 }
