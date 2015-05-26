@@ -1,11 +1,13 @@
 package models;
 
 import java.util.Date;
+import java.util.List;
 
 import play.db.ebean.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 
 @Entity
@@ -29,6 +31,11 @@ public class Card_detail_table extends Model {
 
 	public static Finder<Integer,Card_detail_table> find = new Finder<Integer,Card_detail_table>(
 	        Integer.class, Card_detail_table.class);
+
+
+
+	@OneToOne
+	public List<Thanks_card_table> thanks_card;
 
 
 

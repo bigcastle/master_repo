@@ -1,8 +1,11 @@
 package models;
 
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 
 import play.db.ebean.Model;
 
@@ -24,6 +27,14 @@ public class Stafftable extends Model {
 
 	public static Finder<Integer, Stafftable> find = new Finder<Integer,Stafftable>(
 			Integer.class, Stafftable.class);
+
+	@OneToMany
+	public List<Thanks_card_table> thanks_card;
+
+
+	@ManyToOne
+	public List<DEPARTMENT_TABLE> department;
+
 
 
 }

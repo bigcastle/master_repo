@@ -1,10 +1,14 @@
 package models;
 
 
+import java.util.List;
+
 import play.db.ebean.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
 
 @Entity
 public class DEPARTMENT_TABLE extends Model {
@@ -18,7 +22,12 @@ public class DEPARTMENT_TABLE extends Model {
 	public Integer BOSS_ID;
 
 
-	public static Finder<Long, DEPARTMENT_TABLE> find = new Finder<Long,DEPARTMENT_TABLE>(
-	        Long.class, DEPARTMENT_TABLE.class);
+	public static Finder<Integer, DEPARTMENT_TABLE> find = new Finder<Integer,DEPARTMENT_TABLE>(
+			Integer.class, DEPARTMENT_TABLE.class);
+
+
+
+	@OneToMany
+	public List<Stafftable> user;
 
 }
