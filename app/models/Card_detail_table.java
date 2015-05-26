@@ -33,9 +33,11 @@ public class Card_detail_table extends Model {
 	        Integer.class, Card_detail_table.class);
 
 
-
 	@OneToMany
 	public List<Thanks_card_table> thanks_card;
+
+	@ManyToOne
+	public List<Stafftable> staff;
 
 
 

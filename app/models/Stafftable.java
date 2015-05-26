@@ -35,6 +35,9 @@ public class Stafftable extends Model {
 	@ManyToOne
 	public List<DEPARTMENT_TABLE> department;
 
+	@OneToMany
+	public List<Card_detail_table> card_data;
+
 
 
 }

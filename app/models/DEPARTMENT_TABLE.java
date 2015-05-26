@@ -25,9 +25,9 @@ public class DEPARTMENT_TABLE extends Model {
 	public static Finder<Integer, DEPARTMENT_TABLE> find = new Finder<Integer,DEPARTMENT_TABLE>(
 			Integer.class, DEPARTMENT_TABLE.class);
 
-
-
 	@OneToMany
 	public List<Stafftable> user;
+
+
 
 }

@@ -1,4 +1,4 @@
- @(card_list:List[Card_detail_table])
+ @(card_list : List[Card_detail_table])
 
  <html>
       <head>
@@ -134,17 +134,22 @@ margin-bottom : 0px;
 　　<th>ヘルプ内容</th>
 　　<th>感謝の言葉</th>
   </tr>
+  <tbody>
+  @for(u <- card_list){
   <tr>
+    <td>@u.THANKS_CARD_DATE</td>
+    <td> </td>
     <td>　</td>
+    <td>@</td>
     <td>　</td>
-    <td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
+    <td>@u.THANKS_CARD_HELP</td>
+    <td>@u.THANKS_CARD_WORD</td>
     <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
 　　
   </tr>
+  }
+  </tbody>
+
 　<tr>
     <td>　</td>
     <td>　</td>
