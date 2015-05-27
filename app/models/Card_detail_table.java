@@ -3,10 +3,11 @@ package models;
 import java.util.Date;
 import java.util.List;
 
-import play.db.ebean.Model;
+import play.db.ebean.*;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
