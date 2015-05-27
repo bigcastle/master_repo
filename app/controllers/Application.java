@@ -2,68 +2,34 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
-
-//import models.Stafftable;
-
+import models.Stafftable;
+import models.Card_detail_table;
+import models.DEPARTMENT_TABLE;
+import models.Thanks_card_table;
 import views.html.*;
+
+import java.util.List;
 
 public class Application extends Controller {
 
     public static Result index() {
 
-/*
-    	Stafftable task = new Stafftable();
-
-
-    	task.STAFF_ID =1;
-    	task.STAFF_PASSWORD = "1111";
-    	task.STAFF_NAME = "松本";
-    	task.DEPARTMENT_ID = 1;
-    	task.AUTHORITY_ID = 0;
-    	task.save();
-
-    	task.STAFF_ID =2;
-    	task.STAFF_PASSWORD = "2222";
-    	task.STAFF_NAME = "喜納";
-    	task.DEPARTMENT_ID = 2;
-    	task.AUTHORITY_ID = 0;
-    	task.save();
-
-
-    	task.STAFF_ID =3;
-    	task.STAFF_PASSWORD = "3333";
-    	task.STAFF_NAME = "大城";
-    	task.DEPARTMENT_ID = 3;
-    	task.AUTHORITY_ID = 0;
-    	task.save();
-
-
-    	task.STAFF_ID =4;
-    	task.STAFF_PASSWORD = "4444";
-    	task.STAFF_NAME = "田中";
-    	task.DEPARTMENT_ID = 1;
-    	task.AUTHORITY_ID = 1;
-    	task.save();
-
-
-    	task.STAFF_ID =5;
-    	task.STAFF_PASSWORD = "5555";
-    	task.STAFF_NAME = "上間";
-    	task.DEPARTMENT_ID = 2;
-    	task.AUTHORITY_ID = 1;
-    	task.save();
-
-
-    	task.STAFF_ID =6;
-    	task.STAFF_PASSWORD = "6666";
-    	task.STAFF_NAME = "中西";
-    	task.DEPARTMENT_ID = 3;
-    	task.AUTHORITY_ID = 1;
-    	task.save();
-    								*/
 
         return ok(index.render("hi"));
     }
+
+
+
+    public static Result caseview(){
+    	List<Card_detail_table> card_list = Card_detail_table.find.all();
+
+    	Card_detail_table card =Card_detail_table.find.byId(1);
+    	Thanks_card_table card_id =Thanks_card_table.find.byId(card.THANKS_CARD_RECEIVE);
+    	Stafftable staff_id =Stafftable.find.byId(card_id.STAFF_ID);
+    	DEPARTMENT_TABLE department_id =DEPARTMENT_TABLE.find.byId(staff_id.DEPARTMENT_ID);
+    	return ok(caseview.render(card_list,card_id));
+    }
+
 
 
 }
