@@ -2,7 +2,9 @@ package models;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.ManyToOne;
@@ -14,13 +16,16 @@ import play.db.ebean.Model;
 public class Stafftable extends Model {
 
 	@Id
-	public Integer STAFF_ID;
+	public Integer ID;
 
 	public String STAFF_PASSWORD;
 
 	public String STAFF_NAME;
 
-	public Integer DEPARTMENT_ID;
+
+	@ManyToOne(fetch=FetchType.EAGER)
+	public DEPARTMENT_TABLE DEPARTMENT ;
+
 
 	public Integer AUTHORITY_ID;
 
@@ -28,15 +33,10 @@ public class Stafftable extends Model {
 	public static Finder<Integer, Stafftable> find = new Finder<Integer,Stafftable>(
 			Integer.class, Stafftable.class);
 
-	@OneToMany
-	public List<Thanks_card_table> thanks_card;
 
 
-	@ManyToOne
-	public List<DEPARTMENT_TABLE> department;
 
-	@OneToMany
-	public List<Card_detail_table> card_data;
+
 
 
 
