@@ -17,23 +17,23 @@ public class Card_detail_table extends Model {
 
 
 	@Id
-	public Integer ID;
+	public Integer id;
 
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	public Stafftable send;
 
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	public Stafftable receive;
 
-	public String THANKS_CARD_HELP;
+	public String thanks_card_help;
 
-	public String THANKS_CARD_WORD;
+	public String thanks_card_word;
 
-	public String THANKS_CARD_DATE;
+	public String thanks_card_date;
 
-	public Integer THANKS_CARD_POINT;
+	public Integer thanks_card_point;
 
-	public Integer THANKS_CARD_TOTALPOINT;
+	public Integer thanks_card_totalpoint;
 
 
 
@@ -42,8 +42,9 @@ public class Card_detail_table extends Model {
 	        Integer.class, Card_detail_table.class);
 
 
+ }
 
 
 
 
-}
+
