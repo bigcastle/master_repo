@@ -8,7 +8,6 @@ import play.mvc.*;
 import views.html.authentication.*;
 import play.data.validation.Constraints.*;
 
-
 public class Authentication extends Controller{
 
 	public static class Login {
@@ -28,13 +27,21 @@ public class Authentication extends Controller{
 
 		//社員ＩＤ、パスワードともにあっていればＯＫ
 		private Boolean authenticate(Integer staffId, String passWord){
-			return (staffId.equals(1234) && passWord.equals("mi"));
+		//private Boolean authenticate(String staffId, String passWord){
+			//return (staffId.equals("aika") && passWord.equals("mi"));
+			return (staffId.equals(101304) && passWord.equals("aika"));
 			//return (staffId.equals(staffId) && passWord.equals(passWord));
 			//DBのデータとひかくしなきゃ
 		}
 	}
 
 	public static Form<Login> loginForm = Form.form(Login.class);
+
+
+	/**********************画面遷移ゾーン*************************/
+	public static Result mypage(Integer staffId) {
+		return ok(mypage.render());
+	}
 
 
 	public static Result index() {
@@ -53,8 +60,8 @@ public class Authentication extends Controller{
     	else {
     		Login login = form.get();
     		session("login", "login.staffId");
-    		return ok("ようこそ" + "login.staffId" + "さん");//認証成功ユーザ名の表示
-    		//→マイページに飛ばす処理にする
+
+    		return redirect(routes.Authentication.mypage(login.staffId));
     	}
 
     }
@@ -64,6 +71,4 @@ public class Authentication extends Controller{
         session().clear();
         return redirect(routes.Authentication.index());
     }
-
-
 }
