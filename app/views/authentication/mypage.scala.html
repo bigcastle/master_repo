@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Myページ画面</title>
+
+
+
+
+<style>
+
+table   {width: 800px;
+	border-collapse: collapse;
+	table-layout: fixed;}
+
+th      {width: auto;
+	border: solid 1px #aaaaaa;
+	padding: 8px;
+	background-color: #b8e964;
+	font-size: 0.875em;
+	text-align: left;
+	}
+
+td      {border: solid 1px #aaaaaa;
+	padding: 8px;
+	font-size: 0.875em;}
+
+
+<!--
+.scr {
+   overflow: scroll;   /* スクロール表示 */
+   width: 800px;
+   height: 200px;
+
+ }
+.vsb {
+   overflow: visible;  /* はみ出して表示 */
+   width: 550px;
+   height: 200px;
+
+ }
+.hdn {
+   overflow: hidden;   /* はみ出さず表示 */
+   width: 570px;
+   height: 200px;
+
+ }
+ -->
+.menu{
+margin-right : 100px;
+margin-bottom : 0px;
+}
+</style>
+    </head>
+
+
+
+    <body>
+ <a>Myページ画面</a>
+          <hr>
+
+	<input type="button" style="width:10%;padding:10px;font-size:13px;float:right;" onclick="location.href='@routes.Authentication.logout()'"value="ログアウト">
+
+	<h1>感謝カードシステム</h1>
+
+
+
+<div class="menu" style="float:left">
+
+
+<h2>メニュー</h2>
+
+  <h4>全社員</h4>
+
+  <ul>
+  	<li><a href="#">感謝カード作成</a></li>
+  	<li><a href="#">事例閲覧</a></li>
+  	<li><a href="#">過去の事例閲覧</a></li>
+  </ul>
+  <h4>評価入力者</h4>
+  <ul>
+  	<li><a href="#">評価入力</a></li>
+  </ul>
+  <h4>人事項目</h4>
+  <ul>
+  	<li><a href="#">評価集計</a></li>
+  	<li><a href="#">社員情報登録</a></li>
+  	<li><a href="#">社員情報変更</a></li>
+  </ul>
+</div>
+
+<p>新着情報の通知</p>
+
+<h1>受信履歴</h1>
+
+<div class = "scr">
+ <table border = 1 >
+  <tr>
+    <th>日付</th>
+    <th>部署</th>
+    <th>感謝する人</th>
+　　<th>部署</th>
+　　<th>感謝された人</th>
+　　<th>ヘルプ内容</th>
+　　<th>感謝の言葉</th>
+  </tr>
+  <tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+</table>
+</div><br>
+
+<h1>送信履歴</h1>
+
+<div class = "scr" style="margin-left:250px">
+ <table border = 1>
+  <tr>
+    <th>日付</th>
+    <th>部署</th>
+    <th>感謝する人</th>
+　　<th>部署</th>
+　　<th>感謝された人</th>
+　　<th>ヘルプ内容</th>
+　　<th>感謝の言葉</th>
+  </tr>
+  <tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+</table>
+</div><br>
+
+</body>
+</html>
+
+
