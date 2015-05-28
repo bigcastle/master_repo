@@ -44,5 +44,12 @@ public class Stafftable extends Model {
 
 
 
+    public static Boolean authenticate(Integer id, String password) {
+    	Stafftable user = find.where().eq("id", id).findUnique();
+        return (user != null && user.staff_password.equals(password));
+    }
+
+
+
 
 }
