@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>感謝カード作成画面</title>
+
+　　　<style>
+	#myform label {display: block;
+	              width: 100px;
+		      flat: left;
+		      font-size: 0.875em;}
+　　　</style>
+　　</head>
+
+
+
+    <body>
+	<form action="@routes.Application.create_tasks()" method="POST">
+	<a>感謝カード作成画面</a>
+	<hr>
+	<a href="@routes.Application.Mypage()"><input type="button" style="width:10%;padding:10px;font-size:13px;float:right;" value="Myページ"></a><br>
+
+
+	<div align="center">
+	<table>
+              <tr>
+		  <th>日付:
+ 		  </th>
+                <td>
+                <input type="text" name="" value="" size="18">
+                </td>
+              </tr>
+	</table>
+	<br>
+
+
+	<select name="DEPARTMENT">
+               <option></option>
+               <option value="1001">システム部</option>
+               <option value="1002">営業部</option>
+	       <option value="1003">人事部</option>
+        </select>部　　
+
+	<select name="name">
+               <option>　　　　　　</option>
+        </select>さんへ　
+	<br>
+
+
+
+
+
+<p>
+<label for="com">してもらったこと</label>
+<textarea  name"comment" cols="70" rows="8">
+</textarea>
+</p>
+
+<p>
+<label for="com">感謝の言葉</label>
+<textarea  name"THANKS_CARD" cols="70" rows="8">
+</textarea>
+</p>
+
+<div align="right">
+<p><input type="submit" style="width:10%;padding:10px;font-size:13px;"value="登録"  ></p>
+</div>
+
+</div>
+</form>
+
+　　</body>
+
+</html>
