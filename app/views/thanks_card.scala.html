@@ -15,7 +15,7 @@
 
 
     <body>
-	<form action="@routes.Create.create_thanks()" method="POST">
+	<form action="@routes.Create.create_card()" method="POST">
 	<a>感謝カード作成画面</a>
 	<hr>
 	<input type="button" style="width:10%;padding:10px;font-size:13px;float:right;" value="Myページ"><br>
@@ -27,14 +27,14 @@
 		  <th>日付:
  		  </th>
                 <td>
-                <input type="text" name="" value="" size="18">
+                <input type="text" name="" value="" size="18" name="date">
                 </td>
               </tr>
 	</table>
 	<br>
 
 
-	<select name="DEPARTMENT">
+	<select name="department">
                <option></option>
                <option value="1001">システム部</option>
                <option value="1002">営業部</option>
@@ -52,13 +52,13 @@
 
 <p>
 <label for="com">してもらったこと</label>
-<textarea  name"comment" cols="70" rows="8">
+<textarea  name="comment" cols="70" rows="8">
 </textarea>
 </p>
 
 <p>
 <label for="com">感謝の言葉</label>
-<textarea  name"THANKS_CARD" cols="70" rows="8">
+<textarea  name="thanks_card" cols="70" rows="8">
 </textarea>
 </p>
 
