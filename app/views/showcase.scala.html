@@ -1,4 +1,4 @@
-@(card_list: List[Card_detail_table])
+@(card_list: List[Card_detail_table],ex_card: List[Card_detail_table])
  <html>
       <head>
 
@@ -37,12 +37,17 @@ td      {border: solid 1px #aaaaaa;
    height: 200px;
 
  }
+
+
  -->
 .scr{
 margin-right : 15px;
 margin-bottom : 0px;
 }
+
+
 </STYLE>
+
 
 
            <title>事例閲覧画面</title>
@@ -64,17 +69,30 @@ margin-bottom : 0px;
 　　<th>ヘルプ内容</th>
 　　<th>感謝の言葉</th>
   </tr>
+
+
+    <tbody>
+
+  @for(ex <- ex_card){
   <tr>
-    <td>　</td>
-    <td>　</td>
-    <td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+    <td>@ex.thanks_card_date</td>
+    <td>@ex.send.department.department_name</td>
+    <td>@ex.send.staff_name</td>
+    <td>@ex.receive.department.department_name</td>
+    <td>@ex.receive.staff_name</td>
+    <td>@ex.thanks_card_help</td>
+    <td>@ex.thanks_card_word</td>
+    <td><input type="button" onclick. name="ボタン名" value="詳細"> <br> </td>
 　　
   </tr>
+  }
+
+  </tbody>
+
+
+
+
+
 　<tr>
     <td>　</td>
     <td>　</td>
@@ -83,40 +101,7 @@ margin-bottom : 0px;
 　　<td>　</td>
 　　<td>　</td>
 　　<td>　</td>
-    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
-　　
-  </tr>
-　<tr>
-    <td>　</td>
-    <td>　</td>
-    <td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
-　　
-  </tr>
-　<tr>
-    <td>　</td>
-    <td>　</td>
-    <td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
-　　
-  </tr>
-　<tr>
-    <td>　</td>
-    <td>　</td>
-    <td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　<td><input type="button"  name="ボタン名" value="詳細"> <br> </td>
 　　
   </tr>
 </table>
@@ -144,45 +129,13 @@ margin-bottom : 0px;
     <td>@card.receive.staff_name</td>
     <td>@card.thanks_card_help</td>
     <td>@card.thanks_card_word</td>
-    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+    <td><input type="button" name="ボタン名" value="詳細"> <br> </td>
 　　
   </tr>
   }
   </tbody>
 
-　<tr>
-    <td>　</td>
-    <td>　</td>
-    <td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
-　　
-  </tr>
-　<tr>
-    <td>　</td>
-    <td>　</td>
-    <td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
-　　
-  </tr>
-　<tr>
-    <td>　</td>
-    <td>　</td>
-    <td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
-　　
-  </tr>
+
 　<tr>
     <td>　</td>
     <td>　</td>
@@ -196,10 +149,6 @@ margin-bottom : 0px;
   </tr>
 </table>
 </div><br>
-
-
-
-
 
 
 
