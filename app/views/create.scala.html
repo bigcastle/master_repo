@@ -1,0 +1,79 @@
+@(staff_list: List[Stafftable],department_list: List[Department_table])
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>感謝カード作成画面</title>
+
+　　　<style>
+	#myform label {display: block;
+	              width: 100px;
+		      flat: left;
+		      font-size: 0.875em;}
+　　　</style>
+
+
+
+　　</head>
+
+
+
+    <body>
+	<form action="/create" method="POST">
+	<a>感謝カード作成画面</a>
+	<hr>
+	<input type="button" style="width:10%;padding:10px;font-size:13px;float:right;" value="Myページ"/><br><br>
+
+
+	<div align="center">
+	<table>
+              <tr>
+		  <th>日付(YYYY/MM/DD):
+ 		  </th>
+                <td>
+                <input type="text" name="date" value="" size="18">　　　　
+                </td>　　
+              </tr>
+	</table>
+	<br>
+
+
+	<select name="department">
+               @for(department <- department_list){
+               <option value=@department.id>@department.department_name</option>
+               }
+    </select> 部　　　
+
+	<select name="name">
+               @for(staff <- staff_list){
+               <option value=@staff.id>@staff.staff_name</option>
+               }
+        </select> さんへ　
+	<br>
+
+
+
+
+
+<p>
+<label for="com">してもらったこと</label>
+<textarea  name="comment" cols="70" rows="8">
+</textarea>
+</p>
+
+<p>
+<label for="com">感謝の言葉</label>
+<textarea  name="thanks_card" cols="70" rows="8">
+</textarea>
+</p>
+
+<div align="right">
+<p><input type="submit" style="width:10%;padding:10px;font-size:13px;"value="Create"  /></p>
+</form>
+</div>
+
+</div>
+
+　　</body>
+</html>
