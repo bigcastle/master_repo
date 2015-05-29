@@ -15,8 +15,9 @@ public class Showcase extends Controller {
     	List<Card_detail_table> card_list = Card_detail_table.find.all();
     	List<Card_detail_table> ex_card = Card_detail_table.find.all();
     	ex_card = Card_detail_table.find.where().orderBy("thanks_card_point desc,thanks_card_date desc").findList();
-    	//ex_card = Card_detail_table.find.where().orderBy("thanks_card_date").findList();
+    	card_list = Card_detail_table.find.where().orderBy("thanks_card_date desc").findList();
 
     	return ok(showcase.render(card_list,ex_card));
     }
+
 }
