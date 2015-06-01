@@ -1,4 +1,4 @@
-
+@(card: List[Card_detail_table],staff:List[Stafftable],total: Int,i:Int)
 
 <html lang="ja">
     <head>
@@ -40,7 +40,7 @@
 
 
 <CENTER>
-	<form action="/total" method="PUT">
+	<form action="/total" method="POST">
 	 集計対象者社員ID:<input type="text" name="id" value="" size="18">
 
 	<br>
@@ -56,16 +56,23 @@
 　　<th>集計点</th>
   </tr>
 
+  @if(i==0){
+
+  }
+  @if(i==1){
+	@for(cd <- card){
 　  <tr>
-    <td></td>
-    <td>　</td>
-    <td>　</td>
-　　<td>　</td>
+    <td>@cd.receive.id</td>
+    <td>@cd.receive.department.department_name</td>
+    <td>@cd.receive.staff_name</td>
+　　<td>@total</td>
 　　</tr>
+	}
+	}
  </table>
 
 
-	<p><input type="button" style="width:10%;padding:10px;font-size:13px;float:right;" value="集計"></p>
+	<p><input type="submit" style="width:10%;padding:10px;font-size:13px;float:right;" value="集計"></p>
 	</form>
 	<br>
 	<br>
