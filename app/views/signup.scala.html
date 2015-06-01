@@ -1,0 +1,54 @@
+@(department_list: List[Department_table])
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>社員情報登録画面</title>
+
+    </head>
+
+
+    <body>
+ <a>社員情報登録画面</a>
+          <hr>
+	<input type="button" style="width:10%;padding:10px;font-size:13px;float:right;" value="Myページ">
+	<br>
+	<br>
+
+
+     <form action="/signup" method="POST" name="signup">
+	 社員ID: <input type="text" name="id" value="" size="18">
+	<br>
+	<br>
+
+	部署名:<select name="department">
+
+               <option></option>
+               @for(dep <- department_list){
+               <option value="@dep.id">@dep.department_name</option>
+               }
+        </select>
+	<br>
+	<br>
+
+	 社員名: <input type="text" name="name" value="" size="18">
+	<br>
+	<br>
+
+	 パスワード: <input type="text" name="pass" value="" size="18">
+	<br>
+	<br>
+
+	<p><input type="submit" style="width:10%;padding:10px;font-size:13px;float:right;" value="登録"></p>
+	<br>
+	<br>
+	<br>
+
+	<p><input type="button" style="width:10%;padding:10px;font-size:10px;float:right;" value="キャンセル"></p>
+	<br>
+	<br>
+    </form>
+
+    </body>
+</html>

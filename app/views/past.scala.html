@@ -1,0 +1,192 @@
+@(card_list: List[Card_detail_table],department_list: List[Department_table])
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>過去の事例閲覧画面</title>
+
+　　　<style>
+	#myform label {display: block;
+	              width: 100px;
+		      flat: left;
+		      font-size: 0.875em;}
+
+
+
+
+        table   {width: 800px;
+		border-collapse: collapse;
+		table-layout: fixed;}
+
+	th      {width: auto;
+		border: solid 1px #aaaaaa;
+		padding: 8px;
+		background-color: #b8e964;
+		font-size: 0.875em;
+		text-align: left;
+		}
+
+	td      {border: solid 1px #aaaaaa;
+		padding: 8px;
+		font-size: 0.875em;}
+
+
+	<!--
+	.scr {
+	   overflow: scroll;   /* スクロール表示 */
+	   width: 800px;
+	   height: 300px;
+
+	 }
+	.vsb {
+	   overflow: visible;  /* はみ出して表示 */
+	   width: 550px;
+	   height: 200px;
+
+ 	}
+	.hdn {
+	   overflow: hidden;   /* はみ出さず表示 */
+	  width: 570px;
+	   height: 200px;
+
+	 }
+	 -->
+	.menu{
+	margin-right : 100px;
+	margin-bottom : 0px;
+	}
+
+　　　</style>
+　　</head>
+
+
+
+
+    <body>
+	<form action="index.html" method="GET">
+	<a>過去の事例閲覧画面</a>
+	<hr>
+	<input type="button" style="width:10%;padding:10px;font-size:13px;float:right;" value="Myページ"/><br><br><br>
+
+
+
+
+
+<CENTER>
+	 日付: <input type="text" name="" value="" size="18">
+	<br>
+	<br>
+
+
+
+
+	感謝された人: <select name="DEPARTMENT">
+               <option>　　　　　部</option>
+                @for(dep <- department_list){
+               <option value="@dep.id">@dep.department_name</option>
+               }
+        </select>　　
+
+	<select name="name">
+               <option>　　　名前</option>
+        </select>
+	<br>
+	<br>　
+
+	感謝した人: <select name="DEPARTMENT">
+               <option>　　　　　部</option>
+                @for(dep <- department_list){
+               <option value="@dep.id">@dep.department_name</option>
+               }
+        </select>　　
+
+	<select name="name">
+               <option>　　　名前</option>
+        </select>
+	<br>
+	<br>　
+
+	検索文字列: <input type="text" name="" value="" size="18">
+	<br>
+
+	<input type="button" style="width:10%;padding:10px;font-size:13px;float:right;" value="検索"/><br><br><br><br>
+
+
+<div class = "scr">
+ <table border = 1 >
+  <tr>
+    <th>日付</th>
+    <th>部署</th>
+    <th>感謝する人</th>
+　　<th>部署</th>
+　　<th>感謝された人</th>
+　　<th>ヘルプ内容</th>
+　　<th>感謝の言葉</th>
+  </tr>
+
+  @for(card <- card_list){
+  <tr>
+    <td>@card.thanks_card_date</td>
+    <td>@card.send.department.department_name</td>
+    <td>@card.send.staff_name</td>
+    <td>@card.receive.department.department_name</td>
+    <td>@card.receive.staff_name</td>
+    <td>@card.thanks_card_help</td>
+    <td>@card.thanks_card_word</td>
+    <td><input type="button" onclick. name="ボタン名" value="詳細"> <br> </td>
+　　
+  </tr>
+  }
+
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+</table>
+</div><br>
+</CENTER>
+
+
+    </body>
+</html>
