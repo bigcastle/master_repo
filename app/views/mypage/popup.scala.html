@@ -1,0 +1,51 @@
+@(card_ditail: List[Card_detail_table])
+
+<html lang="ja">
+	<head>
+	<meta charset="UTF-8" />
+		<title>感謝カードの詳細</title>
+<style>
+
+table   {width: 800px;
+	border-collapse: collapse;
+	table-layout: fixed;}
+
+th      {width: auto;
+	border: solid 1px #aaaaaa;
+	width: 40px;
+	high: 8;
+	background-color: #b8e964;
+	font-size: 0.875em;
+	text-align: left;
+	}
+
+td      {border: solid 1px #aaaaaa;
+	width: 40px;
+	high: 50px;
+	font-size: 0.875em;}
+
+</style>
+	</head>
+
+	<body>
+	<div class = "scr">
+ <table border = 1 >
+
+  <tr>
+　　<th>ヘルプ内容</th>
+　　<th>感謝の言葉</th>
+  </tr>
+
+  @for(cd <- card_ditail){
+  <tr>
+   	<td>@cd.thanks_card_help</td>
+	<td>@cd.thanks_card_word</td>
+ </tr>
+  }
+
+</table>
+</div>
+
+	</body>
+
+</html>
