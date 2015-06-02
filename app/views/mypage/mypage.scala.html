@@ -72,9 +72,9 @@ margin-bottom : 0px;
   <h4>全社員</h4>
 
   <ul>
-  	<li><a href="#">感謝カード作成</a></li>
-  	<li><a href="#">事例閲覧</a></li>
-  	<li><a href="#">過去の事例閲覧</a></li>
+  	<li><a href="@routes.Create.create()">感謝カード作成</a></li>
+  	<li><a href="@routes.Showcase.showcase()">事例閲覧</a></li>
+  	<li><a href="@routes.Past.past()">過去の事例閲覧</a></li>
   </ul>
 
   @if(boss != null){
@@ -88,9 +88,9 @@ margin-bottom : 0px;
  @if(authority.authority_id == 1){
  <h4>人事項目</h4>
   <ul>
-  	<li><a href="#">評価集計</a></li>
-  	<li><a href="#">社員情報登録</a></li>
-  	<li><a href="#">社員情報変更</a></li>
+  	<li><a href="@routes.Total.total()">評価集計</a></li>
+  	<li><a href="@routes.Signup.signupview()">社員情報登録</a></li>
+  	<li><a href="@routes.Change.change()">社員情報変更</a></li>
   </ul>
  }
 

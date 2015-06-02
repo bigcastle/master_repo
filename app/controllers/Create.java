@@ -13,10 +13,11 @@ public class Create extends Controller {
 
     public static Result create(){
 
+    	//Integer id = Integer.parseInt(session("login"));
     	List<Stafftable> staff_list = Stafftable.find.all();
     	List<Department_table> department_list = Department_table.find.all();
-    	
-    	
+
+
 
 
     	return ok(create.render(staff_list,department_list));
@@ -25,6 +26,7 @@ public class Create extends Controller {
 
     public static Result cardcreate(){
 
+    	Integer id = Integer.parseInt(session("login"));
     	Map<String,String[]> card =request().body().asFormUrlEncoded();
 
     	Card_detail_table newcard = new Card_detail_table();
@@ -35,7 +37,7 @@ public class Create extends Controller {
     	Stafftable re_staff2 =Stafftable.find.byId(re_staff);
     	newcard.receive= re_staff2;
 
-    	Integer se_staff =3;
+    	Integer se_staff = id ;
     	Stafftable se_staff2 =Stafftable.find.byId(se_staff);
     	newcard.send=se_staff2;
 

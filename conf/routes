@@ -3,9 +3,43 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
+
+GET     /login       				controllers.Authentication.index()
+POST	/login						controllers.Authentication.authenticate()
 
 
+GET		/mypage			controllers.Mypage.mypage()
+POST	/mypage/popup/:id			controllers.Mypage.popup(id:Integer)
+GET		/mypage/popup/:id			controllers.Mypage.popup(id:Integer)
+
+
+GET	/help						controllers.Help2.helps()
+POST   /help						controllers.Help2.helpEva()
+
+
+GET     /logout      				controllers.Authentication.logout()
+
+
+GET     /showcase                   controllers.Showcase.showcase()
+
+
+GET     /create                     controllers.Create.create()
+POST    /create                     controllers.Create.cardcreate()
+
+
+GET     /change                     controllers.Change.change()
+POST    /change                     controllers.Change.change_ck()
+
+
+GET     /signup                     controllers.Signup.signupview()
+POST    /signup                     controllers.Signup.singup_staff()
+
+
+GET     /past                       controllers.Past.past()
+
+
+GET     /total                     controllers.Total.total()
+POST     /total                     controllers.Total.newtotal()
 
 
 
