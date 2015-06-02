@@ -45,7 +45,7 @@ public class Total extends Controller{
 
 		Calendar calendar = Calendar.getInstance();
 	    int year = calendar.get(Calendar.YEAR);
-	    String day_years = year+"";
+	    String day_years = year+"%";
 
 
 
@@ -66,4 +66,3 @@ public class Total extends Controller{
 
 
 }
-
