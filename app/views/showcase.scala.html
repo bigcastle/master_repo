@@ -82,28 +82,13 @@ margin-bottom : 0px;
     <td>@ex.receive.staff_name</td>
     <td>@ex.thanks_card_help</td>
     <td>@ex.thanks_card_word</td>
-    <td><input type="button" onclick. name="ボタン名" value="詳細"> <br> </td>
+    <td>@form(routes.Mypage.popup(ex.id)){<input type = "button"  value = "詳細"
+                    onclick="window.open('@routes.Mypage.popup(ex.id)','win','width=850,height=300,menubar=yes,status=yes,scrollbars=yes') ; return false ;" />} </td>
 　　
   </tr>
   }
 
   </tbody>
-
-
-
-
-
-　<tr>
-    <td>　</td>
-    <td>　</td>
-    <td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td><input type="button"  name="ボタン名" value="詳細"> <br> </td>
-　　
-  </tr>
 </table>
 </div><br>
 <h1>最近の事例</h1>
@@ -129,24 +114,13 @@ margin-bottom : 0px;
     <td>@card.receive.staff_name</td>
     <td>@card.thanks_card_help</td>
     <td>@card.thanks_card_word</td>
-    <td><input type="button" name="ボタン名" value="詳細"> <br> </td>
+    <td>@form(routes.Mypage.popup(card.id)){<input type = "button"  value = "詳細"
+                    onclick="window.open('@routes.Mypage.popup(card.id)','win','width=850,height=300,menubar=yes,status=yes,scrollbars=yes') ; return false ;" />} </td>
 　　
   </tr>
   }
   </tbody>
 
-
-　<tr>
-    <td>　</td>
-    <td>　</td>
-    <td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td>　</td>
-　　<td> <input type="button" name="ボタン名" value="詳細"><br> </td>
-　　
-  </tr>
 </table>
 </div><br>
 
