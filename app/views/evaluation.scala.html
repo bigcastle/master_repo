@@ -1,4 +1,4 @@
-@(card: List[Card_detail_table],staff:List[Stafftable],total: Int,i:Int)
+@(card: List[Card_detail_table],staff:List[Stafftable],total: Int,i:Int,staff_id:Stafftable)
 
 <html lang="ja">
     <head>
@@ -59,16 +59,18 @@
   @if(i==0){
 
   }
+
   @if(i==1){
-	@for(cd <- card){
+
 　  <tr>
-    <td>@cd.receive.id</td>
-    <td>@cd.receive.department.department_name</td>
-    <td>@cd.receive.staff_name</td>
+    <td>@staff_id.id</td>
+    <td>@staff_id.department.department_name</td>
+    <td>@staff_id.staff_name</td>
 　　<td>@total</td>
 　　</tr>
-	}
-	}
+
+}
+
  </table>
 
 
