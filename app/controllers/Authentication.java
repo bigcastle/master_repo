@@ -51,8 +51,12 @@ public class Authentication extends Controller{
     	}
     	else {
     		Login login = form.get();
-    		session("login", "login.staffId");
+    		int a=login.staffId;
+    		String b=String.valueOf(a);
+    		session("login", b);
 
+
+    		//return redirect(routes.Mypage.mypage(session("login")));
     		return redirect(routes.Mypage.mypage(login.staffId));
     	}
 
