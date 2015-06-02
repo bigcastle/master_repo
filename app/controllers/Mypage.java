@@ -2,6 +2,7 @@ package controllers;
 
 import java.util.List;
 
+
 //import models.Card_detail_table;
 import play.mvc.*;
 //import models.Stafftable;
@@ -12,7 +13,8 @@ public class Mypage extends Controller{
 
 	@Security.Authenticated(Secured.class)
 
-	public static Result mypage(Integer staffId) {
+	public static Result mypage() {
+		Integer staffId = Integer.parseInt(session("login"));
 
 		//Stafftable user = Stafftable.find.byId((int)staffId);
 		//Stafftable user.Cdt_s = Stafftable.find.byId((int)staffId);
@@ -29,6 +31,7 @@ public class Mypage extends Controller{
 	public static Result help(){
 		return ok(help.render());
 	}*/
+
 
 	public static Result popup(Integer id){
 		//Card_detail_table card_ditail = Card_detail_table.find.byId((int)id);

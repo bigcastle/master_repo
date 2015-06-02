@@ -67,50 +67,11 @@
 	<form action="index.html" method="GET">
 	<a>過去の事例閲覧画面</a>
 	<hr>
-	<input type="button" style="width:10%;padding:10px;font-size:13px;float:right;" value="Myページ"/><br><br><br>
+	<input type="button" style="width:10%;padding:10px;font-size:13px;float:right;" onclick="location.href='@routes.Mypage.mypage()'"value="Myページ"><br><br><br><br>
 
 
 
 
-
-<CENTER>
-	 日付: <input type="text" name="" value="" size="18">
-	<br>
-	<br>
-
-
-
-
-	感謝された人: <select name="DEPARTMENT">
-               <option>　　　　　部</option>
-                @for(dep <- department_list){
-               <option value="@dep.id">@dep.department_name</option>
-               }
-        </select>　　
-
-	<select name="name">
-               <option>　　　名前</option>
-        </select>
-	<br>
-	<br>　
-
-	感謝した人: <select name="DEPARTMENT">
-               <option>　　　　　部</option>
-                @for(dep <- department_list){
-               <option value="@dep.id">@dep.department_name</option>
-               }
-        </select>　　
-
-	<select name="name">
-               <option>　　　名前</option>
-        </select>
-	<br>
-	<br>　
-
-	検索文字列: <input type="text" name="" value="" size="18">
-	<br>
-
-	<input type="button" style="width:10%;padding:10px;font-size:13px;float:right;" value="検索"/><br><br><br><br>
 
 
 <div class = "scr">

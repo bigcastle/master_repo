@@ -38,6 +38,7 @@ public class Authentication extends Controller{
 
 	public static Result index() {
 		if (session("login") != null){
+			//return redirect(routes.Mypage.mypage(login.staffId));
 			return ok("あなたは既に" + session ("login") + "としてログインしています");
 		}
 		return ok(index.render(loginForm));
@@ -57,7 +58,7 @@ public class Authentication extends Controller{
 
 
     		//return redirect(routes.Mypage.mypage(session("login")));
-    		return redirect(routes.Mypage.mypage(login.staffId));
+    		return redirect(routes.Mypage.mypage());
     	}
 
     }
