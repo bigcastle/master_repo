@@ -1,0 +1,186 @@
+@(depar_staff:List[Card_detail_table])
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>ヘルプ内容評価画面</title>
+
+　　　<style>
+	#myform label {display: block;
+	              width: 100px;
+		      flat: left;
+		      font-size: 0.875em;}
+
+
+
+
+        table   {width: 800px;
+		border-collapse: collapse;
+		table-layout: fixed;}
+
+	th      {width: auto;In
+		border: solid 1px #aaaaaa;
+		padding: 8px;
+		background-color: #b8e964;
+		font-size: 0.875em;
+		text-align: left;
+		}
+
+	td      {border: solid 1px #aaaaaa;
+		padding: 8px;
+		font-size: 0.875em;}
+
+
+	<!--
+	.scr {
+	   overflow: scroll;   /* スクロール表示 */
+	   width: 800px;
+	   height: 200px;
+
+	 }
+	.vsb {
+	   overflow: visible;  /* はみ出して表示 */
+	   width: 550px;
+	   height: 200px;
+
+ 	}
+	.hdn {
+	   overflow: hidden;   /* はみ出さず表示 */
+	  width: 570px;
+	   height: 200px;
+
+	 }
+	 -->
+	.menu{
+	margin-right : 100px;
+	margin-bottom : 0px;
+	}
+
+　　　</style>
+    </head>
+
+
+
+
+    <body>
+ <a>ヘルプ内容評価画面</a>
+          <hr>
+	<input type="button" style="width:10%;padding:10px;font-size:13px;float:right;" value="Myページ">
+	<br>
+	<br>
+	<br>
+	<br>
+
+<CENTER>
+	<form action="/help" method="post">
+	感謝カードID:<input type="text" name="id" value="" size="18">
+
+
+
+
+	　　評価点:<select name="point">
+               <option>　　　　　　　</option>
+               <option value="1">1</option>
+	       <option value="2">2</option>
+	       <option value="3">3</option>
+	       <option value="4">4</option>
+	       <option value="5">5</option>
+	       <option value="6">6</option>
+	       <option value="7">7</option>
+	       <option value="8">8</option>
+	       <option value="9">9</option>
+	       <option value="10">10</option>
+        </select>
+	<br>
+
+
+	<input type="submit" style="width:10%;padding:10px;font-size:13px;float:right;" value="評価入力"/><br><br><br>
+	</form>
+
+<div class = "scr">
+ <table border = 1 >
+  <tr>
+    <th>感謝カードID</th>
+    <th>日付</th>
+    <th>部署</th>
+    <th>感謝する人</th>
+　　<th>部署</th>
+　　<th>感謝された人</th>
+　　<th>ヘルプ内容</th>
+　　<th>感謝の言葉</th>
+　　<th>評価点</th>
+  </tr>
+
+  @for(ex <- depar_staff){
+  <tr>
+    <td>@ex.id</td>
+    <td>@ex.thanks_card_date</td>
+　　<td>@ex.send.department.department_name</td>
+　　<td>@ex.send.staff_name</td>
+　　<td>@ex.receive.department.department_name</td>
+　　<td>@ex.receive.staff_name</td>
+    <td>@ex.thanks_card_help</td>
+    <td>@ex.thanks_card_word</td>
+    <td>@ex.thanks_card_point</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+  }
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td>　</td>
+    <td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td>　</td>
+    <td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td>　</td>
+    <td>　</td>
+    <td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+　<tr>
+    <td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+　　<td>　</td>
+    <td>　</td>
+    <td>　</td>
+　　<td> <input type="button" name="ボタン名" value="詳細"><br> </td>
+　　
+  </tr>
+</table>
+</div><br>
+</CENTER>
+
+
+    </body>
+</html>
