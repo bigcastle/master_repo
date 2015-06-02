@@ -25,10 +25,10 @@ public class Mypage extends Controller{
 	}
 
 
-	@Security.Authenticated(Secured.class)
+	/*@Security.Authenticated(Secured.class)
 	public static Result help(){
 		return ok(help.render());
-	}
+	}*/
 
 	public static Result popup(Integer id){
 		//Card_detail_table card_ditail = Card_detail_table.find.byId((int)id);
